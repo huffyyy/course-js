@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>function parameter & argument</title>
+</head>
+<body>
+    
+    <script>
+        // function tambah (a,b) {
+        //     return a + b;
+        // }
+
+        // var a = parseInt(prompt('masukan nilai 1:'));
+        // var b = parseInt(prompt('masukan nilai 2:'));
+        // var hasil = tambah (a*2, b*2);
+        // console.log (hasil);
+
+        function tambah (a,b){
+            return a + b;
+        }
+
+        function kali(a,b){
+            return a * b;
+        }
+        var a = parseInt(prompt('masukan nilai 1 :'));
+        var b = parseInt(prompt('masukan nilai 2 :'));
+        var c = parseInt(prompt('masukan nilai 3 :'));
+        var d = parseInt(prompt('masukan nilai 4 :'));
+        var hasil = kali(tambah(a,b), tambah(c,d));
+        console.log(hasil);
+    </script>
+    
+</body>
+</html>

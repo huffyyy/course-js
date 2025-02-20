@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkot</title>
+</head>
+<body>
+    <h1>angkot</h1>
+
+    <script>
+        var jumlahangkot = 10 ;
+        var angkotjalan = 6 ;
+        // var kurangsetoran = 8;
+
+        for ( angkot = 1 ; angkot <= jumlahangkot ; angkot++  ) 
+        {
+            if( angkot <= angkotjalan ) {
+
+                console.log('angkot ' + angkot + ' beroperasi baik');
+            }
+            else if (angkot === 8  || angkot === 10 )
+                console.log ('angkot ' + angkot + ' lembur')
+        
+            else {
+
+                console.log('angkot ' + angkot + ' tidak beroperasi dengan baik');
+            }
+}     
+    </script>
+    
+</body>
+</html>
