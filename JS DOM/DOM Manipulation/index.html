@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+    .biru-muda {background-color: lightblue}
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/husnulfk">Instagram Husnul Fikri</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+      </section>
+  </div>
+
+<script>
+// DOM Manipulation
+ const pBaru = document.createElement('p');
+ const tekspBaru = document.createTextNode('paragraf baru');
+//  simpan tulisan ke dalam paragraft 
+pBaru.appendChild(tekspBaru);
+// simpan pBaru di akhir section A
+const sectionA = document.getElementById('a');
+sectionA.appendChild(pBaru);
+
+
+const liBaru = document.createElement('li');
+const teksliBaru = document.createTextNode('item baru');
+liBaru.appendChild(teksliBaru);
+
+const ul = document.querySelector('section#b ul');
+const li2 = ul.querySelector('section#b ul li:nth-child(2)');
+
+ul.insertBefore(liBaru, li2);
+
+
+const link = document.getElementsByTagName('a')[0];
+sectionA.removeChild(link);
+
+const sectionB = document.getElementById('b');
+const p4 = sectionB.querySelector('p');
+const h2Baru = document.createElement('h2');
+const teksH2Baru = document.createTextNode('judul baru!');
+
+h2Baru.appendChild(teksH2Baru);
+
+sectionB.replaceChild(h2Baru, p4)
+
+pBaru.style.backgroundColor = 'lightgreen';
+liBaru.style.backgroundColor = 'lightgreen';
+h2Baru.style.backgroundColor = 'lightgreen';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // element.innerHTML
+
+// const judul = document.getElementById('judul');
+// judul.innerHTML = '<em>Husnul Fikri</em>'
+
+// const sectionA = document.querySelector('section#a');
+// sectionA.innerHTML = '<div><p>paragraft1</p></div>hello world';
+
+
+// // element.style.(propertiCSS)
+// const judul = document.querySelector('#judul');
+// judul.style.color = 'green';
+// judul.style.backgroundColor = 'red';
+
+// // element.setAttribute()
+// const judul = document.getElementsByTagName('h1')[0];
+// judul.setAttribut('name', 'Husnul');
+
+// const a = document.querySelector('section#a a');
+// a.setAttribute('id', 'link');
+
+// // element.classlist
+
+// const p2 = document.querySelector('.p2');
+// p2.classList.add('label');
+// p2.classList.remove('label');
+// p2.classList.toggle('label');
+// document.body.classList.toggle('biru-muda')
+// p2.classList.add('satu')
+// p2.classList.add('dua')
+// p2.classList.add('tiga')
+// p2.classList.contains('dua')
+// p2.classList.replace('tiga','empat')
+</script>
+</body>
+</html>
